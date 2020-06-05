@@ -30,10 +30,7 @@ function setup() {
 	groundSprite=createSprite(width/2, height-35, width,10);
 	groundSprite.shapeColor=color(255)
 	
-	zone1 = new Zone(width/2-65, 640, 10, 60);
-	zone2 = new Zone(width/2, height-35, 120, 10);
-	zone3 = new Zone(width/2+65, 640, 10, 60);
-
+	
 	
 	engine = Engine.create();
 	world = engine.world;
@@ -44,7 +41,12 @@ function setup() {
 
 	//Create a Ground
 	ground = Bodies.rectangle(width/2, 650, width, 10 , {isStatic:true} );
- 	World.add(world, ground);
+	 World.add(world, ground);
+	 
+	 zone1 = new Zone(width/2-110, height-91, 20, 100);
+	zone2 = new Zone(width/2, height-51, 200, 20);
+	zone3 = new Zone(width/2+110, height-91, 20, 100);
+
 
 
 	
